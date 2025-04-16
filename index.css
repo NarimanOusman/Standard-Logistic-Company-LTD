@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header{
+    display: flex;
+background-color: rgb(2, 41, 61);
+justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding: 0 20px;
+}
+h1{
+    color: #fff;
+    padding:  5px;
+    border-radius: 5px;
+}
+h1:hover{
+    color:#f86816;
+}
+.nav_content { 
+    display: flex;
+    gap: 30px; /* Adjust gap between nav items */
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.nav_content a {
+    text-decoration: none;
+    color:#fff;
+    font-weight: bold;
+    align-items: center;
+    
+}
+
+.nav_content a:hover{
+    background-color:rgb(205, 197, 169);
+    padding:3px;
+border-radius: 5px;
+
+}
+.side_bar{
+    font-size: 20px;
+    display: none;
+    color: #fff;
+    font-weight:200
+}
+@media (max-width:768px) {
+    .side_bar{
+        display: block;
+    }
+    .nav_content{
+       display: none;
+       flex-direction: column;
+       position: absolute;
+       z-index: 10px;
+       top: 10%;
+       right: 0px;
+       width: 100%;
+        background-color:skyblue
+    }
+    .nav_content a{
+        padding-bottom: 5px;
+        display: none;
+    }
+    .logo{
+        font-size: 2rem;
+    }
+    .nav_content.open{
+        display: flex;
+    }
+   
+    .logo{
+        font-size: 15px;
+    }
+}
+.logo_image img{
+    height: 350px;
+    width: 400px;
+}
+h2{
+    color: #f5b38c;
+    background-color: rgb(2, 41, 61);
+    font-weight: bolder;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    border-style: double;
+    border-radius: 15px;
+    
+}
+.serve{
+    margin-left:45%;
+    margin-right: 10%;
+   
+}
+.logo_aim {
+    display: flex;
+    gap: 30px; 
+    margin-left: 20px; /* added left margin for spacing from the edge */
+    margin-right: 15px;
+    align-items: flex-start; /* optional: keeps logo and text aligned at the top */
+}
+
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 25px;
+  }
+  
+  .service-card {
+    background-color: rgb(2, 41, 61);
+    width: 30%;
+    min-width: 280px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .service-card h3 {
+    background-color: #f86816;
+    color: rgb(2, 41, 61);
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bolder;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    color: #fff;
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 6px 12px;
+    background-color: #f86816;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  .service-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .service-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Logistic Group Company</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous"
+     referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            SLG-CO-LTD
+        </h1>
+         <nav class="nav_content" id="menulist">
+            <a href="#">Home</a>
+            <a href="#About">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Cars</a>
+            <a href="#">Location</a>
+         </nav>
+         <div class="side_bar" onclick="show()">
+            <i class="fa fa-bars"onclick="toggleMenu()"></i>
+       </div>
+    </header>
+    <section class="bio">
+    <div class="logo_aim">
+        <div class="logo_image">
+           <img src="media/standardlogo.jpg"></img>
+        </div>
+        <div class="aim">
+            <h2 id="About">About Us</h2>
+            <p id="About">
+                <strong>Standart Logistics Group</strong>, based in <strong>South Sudan</strong>, is a professional<br>
+                travel and logistics company committed to delivering reliable and<br>
+                high-quality services.Their mission is to provide seamless and <br>
+                efficient solutions that cater to both individual and corporate<br>
+                clients.The company offers a wide range of services including <br>
+                hotel bookings, taxi services, car rentals and hiring, event <br>
+                management, touring and travel arrangements, as well as national <br>
+                and international ticket booking.With a strong focus on hospitality<br>
+                and customer satisfaction, Standart Logistics Group ensures that<br>
+                every client receives personalized attention and a smooth travel <br>
+                experience from start to finish.<br>
+              </p>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <h2 class="serve">Our Services</h2>
+    <div class="services-grid">
+  
+      <div class="service-card">
+        <h3>Car Hiring</h3>
+        <img src="media/car hiring.png" alt="Car Hiring" class="service-image">
+        <p>We offer a variety of clean, reliable cars for personal, business, or special occasions, with flexible rental options and affordable prices.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Taxi Services</h3>
+        <img src="media/taxi.png" alt="Taxi service" class="service-image">
+        <p>We offer safe, reliable taxi rides for short or long distances, with professional drivers and comfortable vehicles available anytime.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Tour & Traveling</h3>
+        <img src="media/tour.jpg" alt="Tour & Traveling" class="service-image">
+        <p>Enjoy hassle-free tours and travel with our expert planning and reliable transportation for a memorable journey.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Air Ticketing</h3>
+        <img src="media/air ticket.jpg" alt="Air Ticketing" class="service-image">
+        <p>We handle both domestic and international air ticket bookings to make your travel smooth and stress-free.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Hotel Booking</h3>
+        <img src="media/hotel booking.jpg" alt="Hotel Booking" class="service-image">
+        <p>We connect you with quality hotels that suit your preferences and budget for a comfortable stay.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Restaurant Booking</h3>
+        <img src="media/resturant.jpg" alt="Restaurant Booking" class="service-image">
+        <p>Enjoy effortless dining with our restaurant reservation services, tailored to your taste and schedule.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Event Management</h3>
+        <img src="media/event managment.jpg" alt="Event Management" class="service-image">
+        <p>From planning to execution, we manage events of all sizes with creativity, professionalism, and attention to detail.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Contract-Based Procurement</h3>
+        <img src="media/contract.jpg" alt="Contract-Based Procurement" class="service-image">
+        <p>We partner with organizations to market, source, and supply goods as per contract agreements.</p>
+        <button>More</button>
+      </div>
+  
+      <div class="service-card">
+        <h3>Hospitality</h3>
+        <img src="media/hospitality.jpg" alt="Hospitality" class="service-image">
+        <p>We deliver exceptional hospitality services to ensure guests feel welcomed, comfortable, and well-cared for.</p>
+        <button>More</button>
+      </div>
+  
+    </div>
+  </section>
+  
+    
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    const menulist = document.getElementById("menulist");
+
+    function toggleMenu() {
+      menulist.classList.toggle("open");
+    }
+  </script>
+
+  <!--slide up--><script>
+  const cards = document.querySelectorAll('.service-card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.2 // Adjust this for when you want the effect to trigger
+});
+
+cards.forEach(card => {
+  observer.observe(card);
+});
+</script>
+
+  <script>
+    const cards = document.querySelectorAll('.service-card');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2 // Adjust this for when you want the effect to trigger
+    });
+  
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+</body>
+</html>
